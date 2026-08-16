@@ -12,7 +12,11 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <span class="logo-icon">🏛️</span>
+                <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="40" fill="#FF6B35"/>
+                    <path d="M60 80 L100 40 L140 80 L120 80 L120 140 L80 140 L80 80 Z" fill="white"/>
+                    <circle cx="100" cy="50" r="8" fill="white"/>
+                </svg>
                 <span class="logo-text">FIVE CITY</span>
             </div>
             <ul class="nav-menu">
@@ -30,10 +34,20 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background"></div>
         <div class="hero-content">
             <div class="hero-logo">
-                <svg width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="200" height="200" rx="40" fill="#FF6B35"/>
+                <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <rect width="200" height="200" rx="40" fill="#FF6B35" filter="url(#glow)"/>
                     <path d="M60 80 L100 40 L140 80 L120 80 L120 140 L80 140 L80 80 Z" fill="white"/>
                     <circle cx="100" cy="50" r="8" fill="white"/>
                 </svg>
@@ -46,7 +60,6 @@
                 <a href="https://discord.gg/Dwhj9zNF8R" class="btn btn-secondary" target="_blank">السيرفر</a>
             </div>
         </div>
-        <div class="hero-background"></div>
     </section>
 
     <!-- About Section -->
@@ -57,7 +70,7 @@
                 <div class="about-text">
                     <p><strong>Five City</strong> هي مدينة رول بلاي متكاملة تهدف إلى تقديم تجربة حياة واقعية وممتعة داخل عالم مليء بالتفاعل والمغامرات.</p>
                     
-                    <p>في <strong>فايف سيتي</strong> تقدر تعيش شخصيتك بالطريقة اللي تختارها، سواء كنت مواطن، موظف، تاجر، شرطي، أو صاحب أعمال، مع أنظمة وتجارب متنوعة تخلي لكل لاعب قصة خاصة فيه.</p>
+                    <p>في <strong>فايف سيتي</strong> تقدر تعيش شخصيتك بالطريقة اللي تختارها، سواء كنت مواطن، موظف، تاجر، شرطي، أو صاحب أعمال.</p>
 
                     <h3>🎯 أهدافنا:</h3>
                     <ul class="features-list">
@@ -76,12 +89,12 @@
                         <div class="feature">
                             <span class="feature-icon">🏙️</span>
                             <h4>حياة واقعية</h4>
-                            <p>وظائف، تجارة، تفاعل بين اللاعبين، فعاليات ومواقف مختلفة</p>
+                            <p>وظائف، تجارة، تفاعل بين اللاعبين، فعاليات ومواقف</p>
                         </div>
                         <div class="feature">
                             <span class="feature-icon">🔥</span>
                             <h4>تطور مستمر</h4>
-                            <p>تحديثات دورية وأنظمة جديدة تجعل اللعبة دائمًا حية</p>
+                            <p>تحديثات دورية وأنظمة جديدة</p>
                         </div>
                     </div>
                 </div>
@@ -93,27 +106,21 @@
     <section id="founders" class="founders">
         <div class="container">
             <h2 class="section-title">المؤسسون</h2>
-            <div class="founders-grid">
-                <div class="founder-card">
-                    <div class="founder-image">
-                        <img src="https://via.placeholder.com/300x300?text=sb_1w" alt="sb_1w">
+            <div class="founders-showcase">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23000' width='1920' height='1080'/%3E%3C/svg%3E" alt="المؤسسون" class="founders-image" id="foundersImage">
+                <div class="founders-info">
+                    <div class="founder-item">
+                        <h3>sb_1w</h3>
+                        <p>المؤسس والمدير</p>
                     </div>
-                    <h3>sb_1w</h3>
-                    <p>المؤسس والمدير</p>
-                </div>
-                <div class="founder-card">
-                    <div class="founder-image">
-                        <img src="https://via.placeholder.com/300x300?text=King" alt="King">
+                    <div class="founder-item">
+                        <h3>King</h3>
+                        <p>المؤسس والمدير</p>
                     </div>
-                    <h3>King</h3>
-                    <p>المؤسس والمدير</p>
-                </div>
-                <div class="founder-card">
-                    <div class="founder-image">
-                        <img src="https://via.placeholder.com/300x300?text=!F5e_MISHLА7" alt="!F5e MISHLА7">
+                    <div class="founder-item">
+                        <h3>!F5e MISHLА7</h3>
+                        <p>المؤسس والمدير</p>
                     </div>
-                    <h3>!F5e MISHLА7</h3>
-                    <p>المؤسس والمدير</p>
                 </div>
             </div>
         </div>
@@ -128,56 +135,56 @@
                 <div class="rule-card">
                     <h3>🚨 الإغماء</h3>
                     <ul>
-                        <li>في حال إغمائك بشكل كامل، لا يمكنك تذكر الكلام أو الحركة أو فعل أي شيء</li>
-                        <li>إذا تم إسقاطك من شخص وتم إنعاشك من قبل المسعفين، تنسى بعض الأحداث لكن يمكن للمسعفين أن يذكرونك بها</li>
-                        <li>إذا تم حرق جثتك، لا تستطيع تذكر أي شيء حدث لك (مثل العداوات والسيناريوهات)</li>
+                        <li>في حال إغمائك بشكل كامل، لا يمكنك تذكر الكلام أو الحركة</li>
+                        <li>إذا تم إسقاطك وإنعاشك من قبل المسعفين، تنسى بعض الأحداث</li>
+                        <li>إذا تم حرق جثتك، لا تستطيع تذكر أي شيء حدث لك</li>
                     </ul>
                 </div>
 
                 <div class="rule-card">
                     <h3>⏳ العمر والموت</h3>
                     <ul>
-                        <li>لا يمكن العودة للحياة بعد الموت إلا عن طريق إنعاش أو تدخل طبي</li>
-                        <li>يمكن أن يتم "إعادة الحياة" للاعبين عبر الإنعاش أو تدخل طارئ فقط</li>
-                        <li>لا يمكن للبطل أو الشخصيات غير الطبية التدخل في ذلك إلا في الحالات الاستثنائية</li>
+                        <li>لا يمكن العودة للحياة بعد الموت إلا عن طريق إنعاش</li>
+                        <li>يمكن "إعادة الحياة" عبر الإنعاش أو تدخل طارئ فقط</li>
+                        <li>لا يمكن للشخصيات غير الطبية التدخل إلا استثناءً</li>
                     </ul>
                 </div>
 
                 <div class="rule-card">
-                    <h3>⚙️ الباور جيمينج - Power Gaming</h3>
+                    <h3>⚙️ الباور جيمينج</h3>
                     <ul>
-                        <li>استخدام أشياء غير واقعية مثل الهاك أو استخدام ميزات الأدمن في وقت الرول ممنوع تماماً</li>
+                        <li>استخدام الهاك أو ميزات الأدمن ممنوع تماماً</li>
                     </ul>
                 </div>
 
                 <div class="rule-card">
                     <h3>😨 الخوف على الحياة - NVL</h3>
                     <ul>
-                        <li>عدم الخوف بشكل واقعي على حياتك عندما تكون مهددًا بالسلاح أو بأذى شديد</li>
-                        <li>يُعتبر الخوف على الحياة أمرًا أساسيًا وقانونًا من قوانين الرول</li>
+                        <li>عدم الخوف بشكل واقعي على حياتك ممنوع</li>
+                        <li>الخوف على الحياة قانون أساسي</li>
                     </ul>
                 </div>
 
                 <div class="rule-card">
-                    <h3>🧠 الميتا جيمنج - Meta Gaming</h3>
+                    <h3>🧠 الميتا جيمنج</h3>
                     <ul>
-                        <li>أي معلومة تحصل عليها من خارج المدينة، مثل المعلومات التي حصلت عليها من مقطع أو من الديسكورد</li>
+                        <li>استخدام معلومات من خارج المدينة ممنوع</li>
                     </ul>
                 </div>
 
                 <div class="rule-card">
                     <h3>💀 القتل العشوائي - RDM</h3>
                     <ul>
-                        <li>قتل الأشخاص بدون سبب أو تهديد أو عداوة ممنوع تماماً</li>
+                        <li>قتل الأشخاص بدون سبب ممنوع تماماً</li>
                     </ul>
                 </div>
 
                 <div class="rule-card">
-                    <h3>❤️ قانون تقدير الحياة - NwL</h3>
+                    <h3>❤️ تقدير الحياة - NwL</h3>
                     <ul>
-                        <li>الحفاظ على حياتك وحياة الآخرين وعدم التهون في قتل الأشخاص</li>
-                        <li>يجب عدم مقاومة المجرم أو الشرطة أو أي شخص يحمل سلاح، خصوصًا إذا كنت بمفردك</li>
-                        <li>يحق لك استخدام حق الدفاع عن النفس عند الضرورة</li>
+                        <li>الحفاظ على حياتك وحياة الآخرين</li>
+                        <li>عدم المقاومة عند التهديد بالسلاح</li>
+                        <li>حق الدفاع عن النفس عند الضرورة</li>
                     </ul>
                 </div>
             </div>
